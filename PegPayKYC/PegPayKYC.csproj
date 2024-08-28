@@ -1276,6 +1276,12 @@
     <Folder Include="Models\" />
     <Folder Include="Views\Business\" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\NiraApiIntegrationService\NiraApiIntegrationService.csproj">
+      <Project>{5188b08f-a1cb-457f-a199-b486b86daefa}</Project>
+      <Name>NiraApiIntegrationService</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
