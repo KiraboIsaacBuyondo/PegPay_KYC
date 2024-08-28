@@ -13,5 +13,10 @@ namespace PegPayKYC.Controllers
         {
             return View();
         }
+
+        public ActionResult ViewClients()
+        {
+            return View("ViewClients");
+        }
     }
 }
