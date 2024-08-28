@@ -7,7 +7,7 @@ namespace PegPayKYC.Models
 {
     public class Business
     {
-        public string BusinessName;
+        public string BusinessName = "kkkk";
         public string OperationLicenseNumber;
         public string TIN;
         public string VATRegistrationNumber;
