@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NiraApiIntegrationService;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
@@ -66,5 +67,46 @@ namespace PegPayKYC.Controllers
                 return View("ErrorView", e);
             }
         }
+
+        private readonly PegPayService _pegPayService;
+
+        public ClientController()
+        {
+            _pegPayService = new PegPayService(); // Ideally use dependency injection
+        }
+
+        [HttpGet]
+        public ActionResult QueryCustomer()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public String QueryCustomer(string dateOfBirth, string documentId, string givenName,
+                                          string utility, string vendorCode, string password,
+                                          string nationalId, string surname)
+        {
+            var result = _pegPayService.QueryCustomerDetails(dateOfBirth, documentId, givenName,
+                                                             utility, vendorCode, password,
+                                                             nationalId, surname);
+
+            /* ViewBag.Result = result;
+             return View();*/
+
+            if (result != null)
+            {
+                if (result.Contains("True"))
+                {
+                    return "Validated";
+                }
+                else
+                {
+                    return "Not Valid";
+                }
+            }
+
+            return "Nira Returned Null";
+        }
+
     }
 }
