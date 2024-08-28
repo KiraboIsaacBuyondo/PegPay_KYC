@@ -1185,6 +1185,8 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Helpers\DBStorage.cs" />
+    <Compile Include="Helpers\IStorage.cs" />
     <Compile Include="Models\Business.cs" />
     <Compile Include="Models\Director.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -1268,6 +1270,7 @@
     <Content Include="Views\Client\UploadKYC.cshtml" />
     <Content Include="Views\_BusinessLayout.cshtml" />
     <Content Include="Views\Business\ViewClients.cshtml" />
+    <Content Include="Views\Business\ViewStatus.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

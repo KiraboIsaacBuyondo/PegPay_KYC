@@ -1,5 +1,6 @@
 ﻿using System.Web.Mvc;
 using System.Web.Routing;
+using PegPayKYC.Models;
 
 namespace PegPayKYC
 {
@@ -9,6 +10,18 @@ namespace PegPayKYC
         {
             // Ignores the route to any resource in the /Content or /Scripts directories, etc.
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
+
+            routes.MapRoute(
+                name: "ViewBusiness",
+                url: "Business/ViewClients",
+                defaults: new { controller = "Business", action = "ViewClients" }
+            );
+            
+                routes.MapRoute(
+                name: "BusinessViewStatus",
+                url: "Business/ViewStatus",
+                defaults: new { controller = "Business", action = "ViewStatus" }
+            );
 
             //Route for UploadKYC
             routes.MapRoute(
