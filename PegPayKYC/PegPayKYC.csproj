@@ -1179,6 +1179,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\BusinessController.cs" />
     <Compile Include="Controllers\ClientController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
@@ -1262,6 +1263,7 @@
     <Content Include="Views\Client\ViewStatus.cshtml" />
     <Content Include="Views\Client\ClientNotifications.cshtml" />
     <Content Include="Views\Client\Help.cshtml" />
+    <Content Include="Views\Client\UploadKYC.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -1272,6 +1274,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
+    <Folder Include="Views\Business\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

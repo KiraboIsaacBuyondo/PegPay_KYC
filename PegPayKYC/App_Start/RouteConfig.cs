@@ -10,6 +10,19 @@ namespace PegPayKYC
             // Ignores the route to any resource in the /Content or /Scripts directories, etc.
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
+            //Route for UploadKYC
+            routes.MapRoute(
+                name: "UploadKYC",
+                url: "Client/UploadKYC",
+                defaults: new { controller = "Client", action = "UploadKYC" }
+            );
+
+            routes.MapRoute(
+                name: "Upload",
+                url: "Client/Upload",
+                defaults: new { controller = "Client", action = "Upload" }
+            );
+
             // Custom Route for Client Notifications
             routes.MapRoute(
                 name: "ClientNotifications",
